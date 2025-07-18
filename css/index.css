@@ -18,6 +18,10 @@ body {
   font-family: "Poppins", sans-serif;
   font-optical-sizing: auto;
   color: var(--font-color);
+
+  background-image: url("../img/wave.svg");
+  background-position-y: bottom;
+  background-size: cover;
 }
 
 .btn-primary {
@@ -43,41 +47,33 @@ main .welcome {
 main .category .inner {
   color: white;
   cursor: pointer;
-  border: 5px solid transparent;
+  position: relative;
+  overflow: hidden;
   transition: .3s ease;
 }
 
 main .category .general {
   background: var(--purple);
-  border-color: var(--purple);
   box-shadow: var(--shadow-purple);
 }
 
-
 main .category .science {
   background: var(--blue);
-  border-color: var(--blue);
   box-shadow: var(--shadow-blue);
 }
 
-
 main .category .history {
   background: var(--red);
-  border-color: var(--red);
   box-shadow: var(--shadow-red);
 }
 
-
 main .category .anime {
   background: var(--yellow);
-  border-color: var(--yellow);
   box-shadow: var(--shadow-yellow);
 }
 
-
 main .category .coding {
   background: var(--green);
-  border-color: var(--green);
   box-shadow: var(--shadow-green);
 }
 
@@ -101,5 +97,13 @@ main .category i {
 main .category h5 {
   font-size: 1rem;
   font-weight: 600;
+}
+
+main .category img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  opacity: .1;
 }
 /* End Main */
