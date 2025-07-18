@@ -1,0 +1,105 @@
+/* Start Global */
+:root {
+  --red: #E63946;
+  --yellow: #F9C852;
+  --blue: #495787;
+  --green: #43AA8B;
+  --purple: #9068BA;
+  --font-color: #19252E;
+
+  --shadow-red: 0 6px 16px rgba(230, 57, 70, 0.4);
+  --shadow-yellow: 0 6px 16px rgba(249, 200, 82, 0.4);
+  --shadow-blue: 0 6px 16px rgba(73, 87, 135, 0.4);
+  --shadow-green: 0 6px 16px rgba(67, 170, 139, 0.4);
+  --shadow-purple: 0 6px 16px rgba(144, 104, 186, 0.4);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+  color: var(--font-color);
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--blue);
+  --bs-btn-border-color: var(--blue);
+  --bs-btn-hover-bg: #303a5b;
+  --bs-btn-hover-border-color: #303a5b;
+}
+/* End Global */
+
+/* Start Nav */
+nav .logo {
+  width: 250px;
+}
+/* End Nav */
+
+/* Start Main */
+main .welcome {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+main .category .inner {
+  color: white;
+  cursor: pointer;
+  border: 5px solid transparent;
+  transition: .3s ease;
+}
+
+main .category .general {
+  background: var(--purple);
+  border-color: var(--purple);
+  box-shadow: var(--shadow-purple);
+}
+
+
+main .category .science {
+  background: var(--blue);
+  border-color: var(--blue);
+  box-shadow: var(--shadow-blue);
+}
+
+
+main .category .history {
+  background: var(--red);
+  border-color: var(--red);
+  box-shadow: var(--shadow-red);
+}
+
+
+main .category .anime {
+  background: var(--yellow);
+  border-color: var(--yellow);
+  box-shadow: var(--shadow-yellow);
+}
+
+
+main .category .coding {
+  background: var(--green);
+  border-color: var(--green);
+  box-shadow: var(--shadow-green);
+}
+
+main .selected,
+main .category {
+  transition: .3s ease;
+}
+
+main .selected {
+  transform: scale(.96);
+}
+
+main .selected > * {
+  box-shadow: none !important;
+}
+
+main .category i {
+  font-size: 2rem;
+}
+
+main .category h5 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+/* End Main */
