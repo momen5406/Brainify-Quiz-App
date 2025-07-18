@@ -28,9 +28,9 @@
     </head>
     <body>
         <nav class="text-center py-5">
-            <div class="container">
-                <img class="logo" src="img/logo.png" alt="" />
-            </div>
+          <div class="container">
+            <img class="logo" src="img/logo.png" alt="" />
+          </div>
         </nav>
 
         <main>
@@ -41,20 +41,62 @@
                 questions to begin your quiz!
               </p>
 
-              <!-- Number of Questions -->
-              <div class="form-floating my-5 mx-auto" style="width: 500px; max-width: 100%">
-                <input
-                  type="number"
-                  min="1"
-                  max="50"
-                  class="form-control"
-                  id="numberOfQuestions"
-                  name="numberOfQuestions"
-                  placeholder="Number of Questions"
-                  required
-                />
-                <label for="numberOfQuestions">Number of Questions (50 Questions are max)</label>
+              <div class="row g-3 my-5">
+                <div class="col-lg-4 col-12">
+                  <!-- Number of Questions -->
+                  <div class="form-floating">
+                    <input
+                      type="number"
+                      min="1"
+                      max="50"
+                      class="form-control"
+                      id="numberOfQuestions"
+                      name="numberOfQuestions"
+                      placeholder="Number of Questions"
+                      required
+                    />
+                    <label for="numberOfQuestions">Number of Questions (50 Questions are max)</label>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12">
+                  <!-- Difficulty -->
+                  <div class="form-floating">
+                    <select
+                      class="form-select form-control"
+                      id="difficulty"
+                      name="difficulty"
+                      aria-label="Select Difficulty"
+                      required
+                    >
+                      <option selected disabled>Select Difficulty</option>
+                      <option value="easy">Easy</option>
+                      <option value="medium">Medium</option>
+                      <option value="hard">Hard</option>
+                    </select>
+                    <label for="difficulty">Difficulty</label>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12">
+                  <!-- Type -->
+                  <div class="form-floating">
+                    <select
+                      class="form-select form-control"
+                      id="type"
+                      name="type"
+                      aria-label="Select Type"
+                      required
+                    >
+                      <option selected disabled>Select Type</option>
+                      <option value="mcq">MCQ</option>
+                      <option value="trueFalse">True/False</option>
+                    </select>
+                    <label for="type">Question Type</label>
+                  </div>
+                </div>
               </div>
+
 
               <!-- Categories (Radio Buttons) -->
               <div class="row g-4 text-center">
