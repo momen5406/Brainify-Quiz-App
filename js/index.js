@@ -59,6 +59,15 @@ submitButton.addEventListener("click", (e) => {
   startQuiz(amount, difficulty, type, category);
 })
 
+function clearInputs() {
+  numberOfQuestions.value = '';
+  questionDifficulty.selectedIndex = 0;
+  questionType.selectedIndex = 0;
+  document.querySelectorAll(".category").forEach((e) => {
+    e.classList.remove("selected");
+  }) 
+}
+
 async function getData(amount, difficulty, type, category) {
   const api = await fetch(`https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}&type=${type}`);
   
@@ -113,11 +122,12 @@ function addQuestion(questionsList, questionIndex) {
   addAnswers(questionsList, questionIndex);
 }
 
-let questionCounter = 0;
-
-
 
 async function startQuiz(amount, difficulty, type, category) {
+  let questionCounter = 0;
+  nextQuestion.classList.remove("d-none");
+  viewScore.classList.add("d-none");
+
   let data = await getData(amount, difficulty, type, category);
   let questions = data.results;
   console.log(questions);
@@ -126,6 +136,7 @@ async function startQuiz(amount, difficulty, type, category) {
   let wholeNumberOfQuestions = document.querySelector("#whole-number");
   let currentQuestionNumber = document.querySelector("#current-number");
   
+  currentQuestionNumber.innerHTML = questionCounter + 1;
   wholeNumberOfQuestions.innerHTML = questions.length;
 
   mainSection.classList.add("d-none");
@@ -155,5 +166,7 @@ viewScore.addEventListener("click", () => {
 
 startNewQuiz.addEventListener("click", () => {
   scoreSection.classList.add("d-none");
-  mainSection.classList.remove("d-none")
+  mainSection.classList.remove("d-none");
+
+  clearInputs();
 })
