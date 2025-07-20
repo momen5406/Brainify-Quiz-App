@@ -28,139 +28,263 @@
     </head>
     <body>
         <nav class="text-center py-5">
-          <div class="container">
-            <img class="logo" src="img/logo.png" alt="" />
-          </div>
+            <div class="container">
+                <img class="logo" src="img/logo.png" alt="" />
+            </div>
         </nav>
 
-        <main class="d-nonee">
-          <div class="container text-center">
-            <form id="quizForm">
-              <p class="welcome mb-5">
-                Choose from these categories and select the number of
-                questions to begin your quiz!
-              </p>
+        <main>
+            <div class="container text-center">
+                <form id="quizForm">
+                    <p class="welcome mb-5">
+                        Choose from these categories and select the number of
+                        questions to begin your quiz!
+                    </p>
 
-              <div class="row g-3 my-5">
-                <div class="col-lg-4 col-12">
-                  <!-- Number of Questions -->
-                  <div class="form-floating">
-                    <input
-                      type="number"
-                      min="1"
-                      max="50"
-                      class="form-control"
-                      id="numberOfQuestions"
-                      name="numberOfQuestions"
-                      placeholder="Number of Questions"
-                      required
-                    />
-                    <label for="numberOfQuestions">Number of Questions (50 Questions are max)</label>
-                  </div>
-                </div>
+                    <div class="row g-3 my-5">
+                        <div class="col-lg-4 col-12">
+                            <!-- Number of Questions -->
+                            <div class="form-floating">
+                                <input
+                                    type="number"
+                                    min="1"
+                                    max="50"
+                                    class="form-control"
+                                    id="numberOfQuestions"
+                                    name="numberOfQuestions"
+                                    placeholder="Number of Questions"
+                                    required
+                                />
+                                <label for="numberOfQuestions"
+                                    >Number of Questions (50 Questions are
+                                    max)</label
+                                >
+                            </div>
+                        </div>
 
-                <div class="col-lg-4 col-md-6 col-12">
-                  <!-- Difficulty -->
-                  <div class="form-floating">
-                    <select
-                      class="form-select form-control"
-                      id="difficulty"
-                      name="difficulty"
-                      aria-label="Select Difficulty"
-                      required
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <!-- Difficulty -->
+                            <div class="form-floating">
+                                <select
+                                    class="form-select form-control"
+                                    id="difficulty"
+                                    name="difficulty"
+                                    aria-label="Select Difficulty"
+                                    required
+                                >
+                                    <option selected disabled>
+                                        Select Difficulty
+                                    </option>
+                                    <option value="easy">Easy</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="hard">Hard</option>
+                                </select>
+                                <label for="difficulty">Difficulty</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <!-- Type -->
+                            <div class="form-floating">
+                                <select
+                                    class="form-select form-control"
+                                    id="type"
+                                    name="type"
+                                    aria-label="Select Type"
+                                    required
+                                >
+                                    <option selected disabled>
+                                        Select Type
+                                    </option>
+                                    <option value="multiple">MCQ</option>
+                                    <option value="boolean">
+                                        True/False
+                                    </option>
+                                </select>
+                                <label for="type">Question Type</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categories (Radio Buttons) -->
+                    <div class="row g-4 text-center">
+                        <!-- Category Template -->
+                        <div
+                            class="col-xl-2 col-lg-4 col-md-6 col-12 flex-grow-1 category"
+                            data-category="9"
+                        >
+                            <input
+                                type="radio"
+                                name="category"
+                                value="general"
+                                hidden
+                            />
+                            <div
+                                class="inner py-5 px-2 d-flex h-100 flex-column justify-content-between rounded-top rounded-top-4 general"
+                            >
+                                <i class="fas fa-lightbulb fa-2x mb-2"></i>
+                                <h5 class="my-3">General Knowledge</h5>
+                                <p class="small m-0">
+                                    Test yourself with random facts and trivia.
+                                </p>
+                                <img src="img/wave.svg" alt="Wave" />
+                            </div>
+                        </div>
+
+                        <div
+                            class="col-xl-2 col-lg-4 col-md-6 col-12 flex-grow-1 category"
+                            data-category="18"
+                        >
+                            <input
+                                type="radio"
+                                name="category"
+                                value="science"
+                                hidden
+                            />
+                            <div
+                                class="inner py-5 px-2 d-flex h-100 flex-column justify-content-between rounded-top rounded-top-4 science"
+                            >
+                                <i class="fas fa-microscope fa-2x mb-2"></i>
+                                <h5 class="my-3">Science & Technology</h5>
+                                <p class="small m-0">
+                                    Explore physics, tech, and inventions.
+                                </p>
+                                <img src="img/wave.svg" alt="Wave" />
+                            </div>
+                        </div>
+
+                        <div
+                            class="col-xl-2 col-lg-4 col-md-6 col-12 flex-grow-1 category"
+                            data-category="23"
+                        >
+                            <input
+                                type="radio"
+                                name="category"
+                                value="history"
+                                hidden
+                            />
+                            <div
+                                class="inner py-5 px-2 d-flex h-100 flex-column justify-content-between rounded-top rounded-top-4 history"
+                            >
+                                <i class="fas fa-landmark fa-2x mb-2"></i>
+                                <h5 class="my-3">History & Politics</h5>
+                                <p class="small m-0">
+                                    Dive into past events and world milestones.
+                                </p>
+                                <img src="img/wave.svg" alt="Wave" />
+                            </div>
+                        </div>
+
+                        <div
+                            class="col-xl-2 col-lg-4 col-md-6 col-12 flex-grow-1 category"
+                            data-category="31"
+                        >
+                            <input
+                                type="radio"
+                                name="category"
+                                value="anime"
+                                hidden
+                            />
+                            <div
+                                class="inner py-5 px-2 d-flex h-100 flex-column justify-content-between rounded-top rounded-top-4 anime"
+                            >
+                                <i class="fas fa-film fa-2x mb-2"></i>
+                                <h5 class="my-3">Anime & Entertainment</h5>
+                                <p class="small m-0">
+                                    Fun quizzes on anime, movies, and games.
+                                </p>
+                                <img src="img/wave.svg" alt="Wave" />
+                            </div>
+                        </div>
+
+                        <div
+                            class="col-xl-2 col-lg-4 col-md-6 col-12 flex-grow-1 category"
+                            data-category="18"
+                        >
+                            <input
+                                type="radio"
+                                name="category"
+                                value="coding"
+                                hidden
+                            />
+                            <div
+                                class="inner py-5 px-2 d-flex h-100 flex-column justify-content-between rounded-top rounded-top-4 coding"
+                            >
+                                <i class="fas fa-code fa-2x mb-2"></i>
+                                <h5 class="my-3">Coding & Web Development</h5>
+                                <p class="small m-0">
+                                    Challenge your HTML, CSS, and JS knowledge.
+                                </p>
+                                <img src="img/wave.svg" alt="Wave" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Start Button -->
+                    <button
+                        class="btn btn-primary px-5 rounded-5 fs-4 my-5"
+                        type="submit"
+                        id="submitBtn"
                     >
-                      <option selected disabled>Select Difficulty</option>
-                      <option value="easy">Easy</option>
-                      <option value="medium">Medium</option>
-                      <option value="hard">Hard</option>
-                    </select>
-                    <label for="difficulty">Difficulty</label>
-                  </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-12">
-                  <!-- Type -->
-                  <div class="form-floating">
-                    <select
-                      class="form-select form-control"
-                      id="type"
-                      name="type"
-                      aria-label="Select Type"
-                      required
-                    >
-                      <option selected disabled>Select Type</option>
-                      <option value="mcq">MCQ</option>
-                      <option value="trueFalse">True/False</option>
-                    </select>
-                    <label for="type">Question Type</label>
-                  </div>
-                </div>
-              </div>
-
-
-              <!-- Categories (Radio Buttons) -->
-              <div class="row g-4 text-center">
-                <!-- Category Template -->
-                <div class="col-xl-2 col-lg-4 col-md-6 col-12 flex-grow-1 category" data-category="general">
-                  <input type="radio" name="category" value="general" hidden />
-                  <div class="inner py-5 px-2 d-flex h-100 flex-column justify-content-between rounded-top rounded-top-4 general">
-                    <i class="fas fa-lightbulb fa-2x mb-2"></i>
-                    <h5 class="my-3">General Knowledge</h5>
-                    <p class="small m-0">Test yourself with random facts and trivia.</p>
-                    <img src="img/wave.svg" alt="Wave">
-                  </div>
-                </div>
-
-                <div class="col-xl-2 col-lg-4 col-md-6 col-12 flex-grow-1 category" data-category="science">
-                  <input type="radio" name="category" value="science" hidden />
-                  <div class="inner py-5 px-2 d-flex h-100 flex-column justify-content-between rounded-top rounded-top-4 science">
-                    <i class="fas fa-microscope fa-2x mb-2"></i>
-                    <h5 class="my-3">Science & Technology</h5>
-                    <p class="small m-0">Explore physics, tech, and inventions.</p>
-                    <img src="img/wave.svg" alt="Wave">
-                  </div>
-                </div>
-
-                <div class="col-xl-2 col-lg-4 col-md-6 col-12 flex-grow-1 category" data-category="history">
-                  <input type="radio" name="category" value="history" hidden />
-                  <div class="inner py-5 px-2 d-flex h-100 flex-column justify-content-between rounded-top rounded-top-4 history">
-                    <i class="fas fa-landmark fa-2x mb-2"></i>
-                    <h5 class="my-3">History & Politics</h5>
-                    <p class="small m-0">Dive into past events and world milestones.</p>
-                    <img src="img/wave.svg" alt="Wave">
-                  </div>
-                </div>
-
-                <div class="col-xl-2 col-lg-4 col-md-6 col-12 flex-grow-1 category" data-category="anime">
-                  <input type="radio" name="category" value="anime" hidden />
-                  <div class="inner py-5 px-2 d-flex h-100 flex-column justify-content-between rounded-top rounded-top-4 anime">
-                    <i class="fas fa-film fa-2x mb-2"></i>
-                    <h5 class="my-3">Anime & Entertainment</h5>
-                    <p class="small m-0">Fun quizzes on anime, movies, and games.</p>
-                    <img src="img/wave.svg" alt="Wave">
-                  </div>
-                </div>
-
-                <div class="col-xl-2 col-lg-4 col-md-6 col-12 flex-grow-1 category" data-category="coding">
-                  <input type="radio" name="category" value="coding" hidden />
-                  <div class="inner py-5 px-2 d-flex h-100 flex-column justify-content-between rounded-top rounded-top-4 coding">
-                    <i class="fas fa-code fa-2x mb-2"></i>
-                    <h5 class="my-3">Coding & Web Development</h5>
-                    <p class="small m-0">Challenge your HTML, CSS, and JS knowledge.</p>
-                    <img src="img/wave.svg" alt="Wave">
-                  </div>
-                </div>
-              </div>
-
-              <!-- Start Button -->
-              <button class="btn btn-primary px-5 rounded-5 fs-4 my-5" type="submit">
-                Start Quiz
-              </button>
-            </form>
-          </div>
+                        Start Quiz
+                    </button>
+                </form>
+            </div>
         </main>
 
+        <section class="questions-section d-none">
+            <div
+                class="container d-flex align-items-center justify-content-center"
+            >
+                <div class="question-container text-center">
+                    <div class="questions-number mb-5 fs-4">
+                        <span id="current-number" class="current-number">1</span
+                        >/<span id="whole-number" class="whole-number">5</span>
+                    </div>
+                    <h4
+                        id="question-name"
+                        class="question-name text-capitalize"
+                    ></h4>
+                    <div id="answers-container" class="row mt-3 g-5">
+                        
+                    </div>
+                    <button
+                        class="btn btn-primary px-5 rounded-5 fs-5 my-5"
+                        type="submit"
+                        id="nextQuestion"
+                    >
+                        Next Question
+                    </button>
+                    <button
+                        class="btn btn-primary px-5 rounded-5 fs-5 my-5 d-none"
+                        type="submit"
+                        id="viewScore"
+                    >
+                        Vew Score
+                    </button>
+                </div>
+            </div>
+        </section>
 
+        <section class="score-section mt-5 d-none">
+          <div class="container text-center d-flex align-items-center justify-content-center">
+            <div class="score-box p-5 rounded rounded-3">
+              <h4 class="fs-5">Your Score</h4>
+              <div class="user-score-box my-4 fs-1">
+                <span class="user-score">5</span>
+                /
+                <span class="whole-score">10</span>
+              </div>
+              <button
+                  class="btn btn-primary px-5 rounded-5 fs-5"
+                  type="submit"
+                  id="startNewQuiz"
+              >
+                  New Quiz!
+              </button>
+            </div>
+          </div>
+        </section>
 
         <script src="js/index.js"></script>
     </body>
