@@ -32,6 +32,26 @@ body {
   --bs-btn-hover-bg: #303a5b;
   --bs-btn-hover-border-color: #303a5b;
 }
+
+#correctMsg,
+#wrongMsg {
+  position: absolute;
+  top: -110%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  transition: .3s ease;
+}
+
+#correctMsg {
+  background-color: var(--green);
+}
+
+#wrongMsg {
+  background-color: var(--red);
+}
 /* End Global */
 
 /* Start Nav */
@@ -149,6 +169,32 @@ p {
 
 .inner-box-shadow {
   box-shadow: 0 0px 15px rgba(144, 104, 186, 0.2);
+}
+
+.correct-answer {
+  box-shadow: 0 0 15px rgba(67, 170, 139, 0.6) !important;
+}
+
+.correct-answer .checkbox {
+  outline-color: var(--green);
+}
+
+.correct-answer .checkbox-selected {
+  background-color: var(--green);
+  outline-color: var(--green);
+}
+
+.incorrect-answer {
+  box-shadow: 0 0 15px rgba(230, 57, 70, 0.2) !important;
+}
+
+.incorrect-answer .checkbox {
+  outline-color: var(--red);
+}
+
+.incorrect-answer .checkbox-selected {
+  background-color: var(--red);
+  outline-color: var(--red);
 }
 /* End Questions */
 
