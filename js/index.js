@@ -1,5 +1,3 @@
-// 🧠 Brainify Quiz App – Refactored & Documented
-
 // ============================== GLOBAL STATE ==============================
 const categories = document.querySelectorAll(".category");
 let chooseCategory;
