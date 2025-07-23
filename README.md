@@ -71,7 +71,7 @@ responsive-design, web-development, frontend-project, open-trivia-api, trivia-ga
 
 ## 🙋‍♂️ Author
 
-Made with 💙 by **Mo’men Hussein**
+Made by **Mo’men Hussein**
 📬 [LinkedIn](https://www.linkedin.com/in/momen5406) | [GitHub](https://github.com/momen5406)
 
 ---
